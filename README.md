@@ -1,4 +1,4 @@
-# Site indexer
+# Conversor
 
 Conversor is an application that convert temperature in Kelvin, Celsius and Fahrenheit.
 This application are disponible in https://github.com/Henryxavierb/Conversor_temp
