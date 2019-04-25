@@ -5,6 +5,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -43,5 +44,14 @@ public class MainActivity extends AppCompatActivity {
                 finish();
             }
         });
+
+    }
+    @Override
+    public void onStart() {
+        super.onStart();
+        Toast.makeText(getApplicationContext(), "Selecione uma opção de conversor", Toast.LENGTH_SHORT).show();
+    }
+    public void onBackPressed() {
+        super.onBackPressed();
     }
 }
