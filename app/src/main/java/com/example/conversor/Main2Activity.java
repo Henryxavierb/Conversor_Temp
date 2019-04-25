@@ -1,5 +1,6 @@
 package com.example.conversor;
 
+import android.app.PendingIntent;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -7,13 +8,13 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class Main2Activity extends AppCompatActivity {
 
     private EditText caixaTexto;
     private Button botaoConverter;
     private TextView resultado;
-    private TextView mensagemError;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,7 +24,6 @@ public class Main2Activity extends AppCompatActivity {
         caixaTexto = (EditText) findViewById(R.id.caixaTextold);
         botaoConverter = (Button) findViewById(R.id.botaolConverterld);
         resultado = (TextView) findViewById(R.id.resultadoId);
-        mensagemError = (TextView) findViewById(R.id.mensagemErrorId);
 
         botaoConverter.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -35,7 +35,7 @@ public class Main2Activity extends AppCompatActivity {
                 double valorResultadoFareheint;
 
                 if (textoDigitado.isEmpty()) {
-                    mensagemError.setText("Nenhum numero digitado!!!");
+                    Toast.makeText(getApplicationContext(), "Digite um valor!", Toast.LENGTH_SHORT).show();
 
                 } else {
                     if (textoDigitado.startsWith("-")) {
@@ -47,9 +47,7 @@ public class Main2Activity extends AppCompatActivity {
                     }
                     valorResultadoKelvin = 273 + valorDigitado;
                     valorResultadoFareheint = (valorDigitado * 9 / 5) + 32;
-                    mensagemError.setText("");
                     resultado.setText("A temperatura em Kelvin é de:\n" + valorResultadoKelvin + "K" + "\nA temperatura em Fahrenheint é de:\n" + valorResultadoFareheint + "F");
-
                 }
             }
         });
@@ -65,5 +63,11 @@ public class Main2Activity extends AppCompatActivity {
             }
         });
 
+    }
+    @Override
+    public void onBackPressed() {
+        Intent TELA1 = new Intent(Main2Activity.this, MainActivity.class);
+        startActivity(TELA1);
+        super.onBackPressed();
     }
 }
