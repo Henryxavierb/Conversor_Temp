@@ -1,7 +1,7 @@
 # Conversor
 
 Conversor is an application that convert temperature in Kelvin, Celsius and Fahrenheit.
-This application are disponible in https://github.com/Henryxavierb/Conversor_temp
+This application is disponible in https://github.com/Henryxavierb/Conversor_temp
 
 ## App image
 
