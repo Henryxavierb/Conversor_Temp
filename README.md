@@ -5,11 +5,8 @@ This application is disponible in https://github.com/Henryxavierb/Conversor_temp
 
 ## App image
 
-![Home page](https://media.discordapp.net/attachments/507372963302211603/565979670042902528/Screenshot_20190411-162004.png?width=263&height=468)
-![Second page1](https://media.discordapp.net/attachments/507372963302211603/565979670869442570/Screenshot_20190411-162010.png?width=263&height=468)
-![Second page2](https://media.discordapp.net/attachments/507372963302211603/565979670042902530/Screenshot_20190411-162024.png?width=263&height=468)
-![Second page3](https://media.discordapp.net/attachments/507372963302211603/565979671360045058/Screenshot_20190411-162015.png?width=263&height=468)
-![Second page4](https://media.discordapp.net/attachments/507372963302211603/565979671360045056/Screenshot_20190411-162043.png?width=263&height=468)
+![home](https://user-images.githubusercontent.com/48387142/59658181-508d0400-9179-11e9-8975-e9a6a71d01f6.png)
+![temp page](https://user-images.githubusercontent.com/48387142/59658212-600c4d00-9179-11e9-8820-d3e83295bb76.png)
 
 
 
