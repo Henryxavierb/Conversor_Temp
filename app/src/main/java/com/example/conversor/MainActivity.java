@@ -18,7 +18,7 @@ public class MainActivity extends AppCompatActivity {
         Button graus  = findViewById(R.id.tela2);
         Button kelvin  = findViewById(R.id.tela3);
         Button fahrenheit  = findViewById(R.id.tela4);
-        final MediaPlayer mp = MediaPlayer.create(this, R.raw.sound);
+        final MediaPlayer mp = MediaPlayer.create(this, R.raw.sound_button);
 
         graus.setOnClickListener(new View.OnClickListener() {
             @Override
