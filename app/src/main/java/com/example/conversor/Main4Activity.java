@@ -17,8 +17,12 @@ public class Main4Activity extends AppCompatActivity {
     private EditText caixaTexto;
     private Button botaoConverter;
     private TextView resultado;
-    private ToggleButton tb;
+    private Button btn;
     private TextView mf;
+    double valorDigitado;
+    double valorResultadoCelsius;
+    double valorResultadoKelvin;
+    String textoDigitado;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,17 +32,14 @@ public class Main4Activity extends AppCompatActivity {
         caixaTexto = (EditText) findViewById(R.id.caixaTextold);
         botaoConverter = (Button) findViewById(R.id.botaolConverterld);
         resultado = (TextView) findViewById(R.id.resultadoId);
-        tb = (ToggleButton) findViewById(R.id.formula);
+        btn = (Button) findViewById(R.id.formula);
         mf = (TextView) findViewById(R.id.mostrarFormula);
 
         botaoConverter.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
-                String textoDigitado = caixaTexto.getText().toString();
-                double valorDigitado;
-                double valorResultadoCelsius;
-                double valorResultadoKelvin;
+                textoDigitado = caixaTexto.getText().toString();
 
                 if (textoDigitado.isEmpty()) {
                     Toast.makeText(getApplicationContext(), "Digite um valor!", Toast.LENGTH_SHORT).show();
@@ -64,19 +65,21 @@ public class Main4Activity extends AppCompatActivity {
         voltar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent TELA4 = new Intent(Main4Activity.this, MainActivity.class);
-                startActivity(TELA4);
+                Intent TELA3 = new Intent(Main4Activity.this, MainActivity.class);
+                startActivity(TELA3);
                 finish();
             }
         });
 
-        tb.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+        btn.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                mf.setText("");
-                if(isChecked) {
-                    mf.setText("Temperatura Celsius = (Temperatura Farenheint - 32) * 5 / 9 \n\n Temperatura Kelvin = (Temperatura Farenheint - 32) * 5 / 9 + 273");
-                }
+            public void onClick(View view) {
+                textoDigitado = caixaTexto.getText().toString();
+
+                Intent TELA2 = new Intent(Main4Activity.this, FahrenheintFormula.class);
+                TELA2.putExtra("tempFah", textoDigitado);
+                startActivity(TELA2);
+                finish();
             }
         });
     }

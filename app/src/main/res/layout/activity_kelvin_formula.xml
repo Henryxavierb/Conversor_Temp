@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".KelvinFormula">
+
+    <ImageView
+        android:id="@+id/tela1"
+        android:layout_width="55dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginBottom="8dp"
+        android:background="@drawable/icon_back" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="100dp"
+        android:gravity="center"
+        android:textSize="25sp"
+        android:text="Calculando Celsius"
+        android:textAlignment="center"
+        android:textColor="#283593"/>
+
+    <TextView
+        android:id="@+id/calculo"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="200dp"
+        android:gravity="center"
+        android:textSize="25sp"
+        android:textAlignment="center"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="300dp"
+        android:gravity="center"
+        android:textSize="25sp"
+        android:text="Calculando Fahrenheint"
+        android:textAlignment="center"
+        android:textColor="#283593"/>
+
+    <TextView
+        android:id="@+id/calculoDois"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="390dp"
+        android:gravity="center"
+        android:textSize="25sp"
+        android:textAlignment="center"/>
+
+    <ToggleButton
+        android:id="@+id/formula"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="520dp"
+        android:textOff="Fórmula"
+        android:textOn="Ocultar"
+        android:textColor="#ffffff"
+        android:background="@drawable/next_button"/>
+
+    <TextView
+        android:id="@+id/mostrarFormula"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_marginTop="590dp"
+        android:gravity="center"
+        android:text=""
+        android:textSize="15sp" />
+
+</RelativeLayout>
